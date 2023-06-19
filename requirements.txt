@@ -1,2 +1,2 @@
-Flask=2.3.2
-pywhatkit=5.4
+Flask==2.3.2
+pywhatkit==5.4
