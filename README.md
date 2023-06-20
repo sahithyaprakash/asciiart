@@ -2,6 +2,24 @@
 An application that converts 2D image files into its corresponding ASCII version (also known as "ASCII Art"). 
 
 # API Documentation
+**URL**: POST /ascii/convert  
+  
+**Description**: Accepts a 2D image file and returns a JSON object with the string representing the corresponding ASCII version. Only .jpg files are supported.
+  
+**Parameters**: None  
+  
+**Body**:
+| Type | Key | Value |
+| --- | --- | --- |
+| `form-data` | `file` | The image file |
+
+**Returns**:
+| Status Code | Description | Response Data |
+| --- | --- | --- |
+| `200` | Success | A JSON object with one key, "ascii", whose value is the string representing the ASCII version of the given image file. |
+| `400` | Bad Request | Error message is returned if file body is not included, file in body is null or empty, or file type isn't supported. |
+| `405` | Method Not Allowed | N/A |
+| `500` | Internal Server Error | Error message is returned if the server is unable to process or complete the request. |
 
 
 # Running the Application
