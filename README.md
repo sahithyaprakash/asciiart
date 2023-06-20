@@ -26,3 +26,4 @@ These instructions assume python (and pip) are already installed and added to th
 4. Hit Send. The response body should be a JSON object containing the ASCII string version of the image file requested. 
 
 # Testing the Application
+1. Navigate to ```location/of/cloned/repo/asciiart/ASCIIArt/ASCIIArt``` and run ```python -m pytest```
