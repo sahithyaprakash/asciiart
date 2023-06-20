@@ -23,9 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ASCIIArt.py" />
+    <Compile Include="tests\test_ASCIIArt.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="tests\" />
+    <Folder Include="tests\Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
