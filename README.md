@@ -26,8 +26,11 @@ An application that converts 2D image files into its corresponding ASCII version
 These instructions assume python (and pip) are already installed and added to the system's PATH environment variable. You can download the latest version of python [here](https://www.python.org/downloads/).
 
 1. Clone the project.
-2. Navigate to ```location/of/cloned/repo/asciiart``` and run ```pip install -r requirements.txt```
-3. From the current location, navigate to ```.../ASCIIArt/ASCIIArt``` and run ```py ASCIIArt.py```. The server should now be running on ```http://localhost:5000```.
+2. Navigate to ```location/of/cloned/repo/asciiart/ASCIIArt/ASCIIArt```.
+3. Run ```py -m venv env``` to create a virtual environment env.
+4. Run ```env\Scripts\activate``` (for Windows). You should now see (env) prepended to the shell prompt. 
+5. Navigate two directies up to ```location/of/cloned/repo/asciiart``` and run ```pip install -r requirements.txt```. 
+7. Navigate back to ```location/of/cloned/repo/asciiart/ASCIIArt/ASCIIArt``` and run ```py ASCIIArt.py```. The server should now be running on ```http://localhost:5000```. 
 
 # Generating a Sample ASCII Conversion
 1. Once the application is running (using the steps above), either cURL or Postman can be used to call the server to convert an image file into ASCII art.
