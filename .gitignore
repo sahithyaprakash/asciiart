@@ -364,3 +364,6 @@ FodyWeavers.xsd
 
 # pywhatkit output file
 pywhatkit_asciiart.txt
+
+# Virtual Environment
+env/
