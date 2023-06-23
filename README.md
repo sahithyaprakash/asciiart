@@ -37,7 +37,7 @@ These instructions assume python (and pip) are already installed and added to th
 
 ## cURL
 1. Download cURL [here](https://everything.curl.dev/get).
-2. In a separate command prompt, navigate to ```location/of/cloned/repo/asciiart/ASCIIArt/ASCIIArt``` and run ```curl -F file=@Images/mona_lisa.jpg http://localhost:5000/ascii/convert```. This example is using the sample image file ```mona_lisa.jpg``; ```george_washington_large.jpg``` is another sample image file included that can also be used.
+2. In a separate command prompt, navigate to ```location/of/cloned/repo/asciiart/ASCIIArt/ASCIIArt``` and run ```curl -F file=@Images/mona_lisa.jpg http://localhost:5000/ascii/convert```. This example is using the sample image file ```mona_lisa.jpg```; ```george_washington_large.jpg``` is another sample image file included that can also be used.
 3. The JSON response of the cURL request should contain the ACII string version of the image file requested. 
 
 ## Postman
@@ -53,7 +53,7 @@ These instructions assume python (and pip) are already installed and added to th
 ## Assumptions
 1. The service's main functionality is to convert images it receives into ASCII art, so storing information in a database isn't necessary. Based on this assumption, a non-full stack web service framework like Django wasn't chosen. NOTE: We may want to increase performance in the future by adding caching or to expand functionality so that a user can retrieve all images they've requested. These additions will require a database layer.
 2. Since we want to resize images to improve performance, a third party library should be picked appropriately.
-3. There is not much business logic in the app to create unit tests for (except for the is_filename_allowed helper method), so I focused on integration testing and coupled the is_filanem_allowed logic in those tests.
+3. There is not much business logic in the app to create unit tests for (except for the is_filename_allowed helper method), so I focused on integration testing and coupled the is_filename_allowed logic in those tests.
 
 ## Limitations
 1. **Pywhatkit is deprecated and another library should be used.**
