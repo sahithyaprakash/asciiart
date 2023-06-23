@@ -48,3 +48,16 @@ These instructions assume python (and pip) are already installed and added to th
 
 # Testing the Application
 1. Navigate to ```location/of/cloned/repo/asciiart/ASCIIArt/ASCIIArt``` and run ```python -m pytest```
+
+# Libraries
+## Flask
+1. **Why was it chosen?** Flask was chosen due to its simplicity in spinning up a service. I assumed the app wouldn't need to store any information/a database layer, hence I chose a non-full-stack web service framework (I didn't want to pick a framework that was "overkill"). The app seemed to resemble a highly-specialized microservice, which Flask is well suited for (and I wanted to go the route of microservices architecture vs. a monolithic approach). Flask offers flexibility, e.g. if future functionality and design are still unknown, Flask makes it easy to add supplemental technologies/frameworks in the future.
+2. **Limitations** Flask is not as stable and secure as other out-of-the-box full-stack frameworks like Django. It is also not as well-equipped to handle increased load and scale as other, more mature frameworks. A lot of fundamental things don't come for free in Flask, like security in production, and require developer work to add and maintain. All of these reasons add to the high maintenance cost of Flask, especially when the service has to grow. Also, Flask can only handle one request at a time by default; the app can be horizontally scaled, but it's not a scalable solution. Implementation in Flask may require migration/re-work in the future to account for increased scale. Finally, frameworks like Django have larger community support, increasing the likelihood of better documentation, faster bug fixes, and more features. 
+3. **Maturity Level** Mature. Widely supported and popular, but not as much community support as frameworks like Django. 
+4. **Testing** Works with the pytest framework. Also has its own Flask-Testing library. 
+5. **Performance Considerations** Compared to bigger frameworks like Django, Flask is faster due to fewer abstraction layers. Since the app is highly specialized, running in Flask can help speed up performance. A dedicated WSGI server like Gunicorn is needed to host the app in production. 
+
+## Pywhatkit
+1. **Why was it chosen?** Of the libraries available, pywhatkit has the higher number of contributors and usage. It has over 30 contributors and has been used by over 3000 users. The library was also chosen due to its simplicity in integration and use. Also, pywahtkit automatically resizes large images, satisfying one of the app's requirement out-of-the-box and speeding up performance for large images. 
+2. **Limitations** I recently discovered that this library is **deprecated** and should not be integrated with any further. With more development time, I would prioritize switching over to a different library that is being actively maintained. 
+3. **Maturity Level** Production/Stable development status. 
