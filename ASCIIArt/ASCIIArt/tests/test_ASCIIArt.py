@@ -28,7 +28,7 @@ def test_no_filename(client):
     assert response.status_code == 400
 
 def test_unsupported_file_extension(client):
-    image = open(os.path.dirname(__file__) + r'\Images\mona_lisa.png', 'rb')
+    image = open(os.path.dirname(__file__) + r'\Images\mona_lisa_unsupported.png', 'rb')
     response = client.post("/ascii/convert", data={"file": image})
     assert response.status_code == 400
 

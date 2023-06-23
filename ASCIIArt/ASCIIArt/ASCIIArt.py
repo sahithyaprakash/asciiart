@@ -43,6 +43,7 @@ def ascii_convert():
 
     try:
         converted_image_string = kt.image_to_ascii_art(image_to_convert)
+        print(converted_image_string)
         return {'ascii': converted_image_string}
     except Exception as err:
         return f"Could not convert image to ASCII art. Error: {err}", 500
